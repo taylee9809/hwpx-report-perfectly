@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hwpx-restyle"
+version = "0.1.0"
+description = "샘플 HWPX의 서식으로 다른 보고서(텍스트·표·그림)를 재조판하는 도구"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+dependencies = ["lxml", "Pillow"]
+
+[project.optional-dependencies]
+verify = ["PyMuPDF"]
+mcp = ["mcp>=1.0"]
+
+[project.scripts]
+hwpx-restyle = "hwpx_restyle.__main__:main"
+hwpx-restyle-mcp = "hwpx_restyle.mcp_server:main"
+
+[tool.setuptools]
+packages = ["hwpx_restyle"]
+
+[tool.setuptools.package-data]
+hwpx_restyle = ["pic_proto.xml"]

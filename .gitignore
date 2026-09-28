@@ -1,0 +1,17 @@
+# 실제 보고서·산출물은 올리지 않는다(발주처 자료)
+work/
+*.hwp
+*.hwpx
+*.pdf
+*.png
+*.tif
+*.tiff
+*.jpg
+!docs/img/*.png
+__pycache__/
+*.egg-info/
+.venv/
+
+# 인수인계 문서는 발주처·사업명·로컬 경로가 있어 폴더에만 둔다(공개 X)
+HANDOFF.md
+private/
